@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #CEFEFF;
+    animation: background 12s linear infinite;
+    overflow: hidden;
+}
+section {
+    width: 1000px;
+    height: 600px;
+    position: absolute;
+    /* background-color: blanchedalmond; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 가로 세로 가운데정렬 해주세요!*/
+}
+section .sky {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+section .sky .sun {
+    position: absolute;
+    width: 180px;
+    display: block;
+    left: 50%;
+    margin-left: -90px;
+    transform-origin: 50% 600px;
+    animation: sun 12s linear infinite;
+/* animation 걸어주세요! */
+}
+/* moon 혼자 해보세요!
+애니메이션도 걸어주세요! */
+section .sky .moon {
+    width: 160px;
+    position: absolute;
+    display: block;
+    left: 50%;
+    margin-left: -90px;
+    transform-origin: 50% 600px;
+    opacity: 0;
+    animation: moon 12s linear infinite;
+}
+section .sky .cloud_1 {
+    width: 160px;
+    animation: move_c1 4s linear infinite;
+    position: absolute;
+}
+section .sky .cloud_2 {
+    width: 90px;
+    animation: move_c2 12s linear infinite;
+    position: absolute;
+}
+/* city */
+section .city {
+    width: 100%;
+}
+section .city .city_img {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+/* keyframes  작성해주세요!*/
+@keyframes move_c1 {
+    0% {
+        top: 10vh;
+        left: 20vw;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        top: 10vh;
+        left: 90vh;
+        opacity: 0;
+    }
+}
+@keyframes move_c2 {
+    0% {
+        top: 10vh;
+        left: 40vw;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        top: 10vh;
+        left: 80vw;
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    60% {
+        top: 10vh;
+        left: 20vw;
+        opacity: 0;
+    }    
+    70% {
+        opacity: 1;
+    }   
+    90% {
+        opacity: 1;
+    }
+    100% {
+        top: 10vh;
+        left: 80vw;
+        opacity: 0;
+    }
+}
+@keyframes background {
+    0% {
+      background: #308385;
+    }
+  
+    25% {
+      background-color: rgb(195, 185, 212);
+    }
+  
+    50% {
+      background-color: rgb(35, 116, 116);
+    }
+  
+    75% {
+      background-color: rgb(110, 31, 93);
+    }
+  
+    100% {
+      background: #308385;
+    }
+  }
+  @keyframes sun {
+    0%{
+        transform: translateY(-100px) rotate(-90deg);
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        transform: translateY(-100px) rotate(90deg);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(-100px) rotate(-90deg);
+        opacity: 0;
+    }
+  }
+  @keyframes moon {
+    0%{
+        transform: translateY(-100px) rotate(-90deg);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(-100px) rotate(90deg);
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-100px) rotate(-90deg);
+        opacity: 0;
+    }
+  }
